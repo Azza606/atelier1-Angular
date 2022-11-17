@@ -1,0 +1,13 @@
+{{titre}}
+<p>Liste des articles</p>
+<div *ngFor="let a of listeArticles">  
+
+    <div>
+        {{a.titre}}
+        {{a.contenu}}
+        {{a.auteur}}
+        {{a.date}}
+        {{a.categorie}}
+        <input type="submit" value="postuler" [disabled]="e.etat==false">
+    </div>
+</div>

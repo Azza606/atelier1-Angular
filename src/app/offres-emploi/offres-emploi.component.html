@@ -1,0 +1,18 @@
+<p>Liste des emplois</p>  
+<div *ngFor="let e of listeEmploi">  
+
+    <div>
+        {{e.reference}}
+        {{e.titre}}
+        {{e.entreprise}}
+        {{e.etat}}
+        <input type="submit" value="postuler" [disabled]="e.etat==false">
+    </div>
+</div>
+<div>
+    <input type="submit"  (click)="calculer()" value="bilan" > 
+    <input type="text" [(ngModel)]="somme">
+</div>
+
+<input type="text"[(ngModel)]="search">
+
